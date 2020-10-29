@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+body { background:rgb(30,30,40); }
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+
+}
+label {
+  font-size: 20px;
+  color: black;
+  padding: 8px;
+  font-family: Arial;
+  display: block;
+  float: left;
+}
+
+
+.datepicker{
+color:black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+
+}
+.datepicker:focus { border:2px solid #CC4949; }
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
+</style>
+
+
+{% if projectlist %}
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Esop Data</h1>
+
+          <!-- DataTales Example -->
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary"></h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                        <th style="background-color: black; color:white; border: 1px solid white">Project</th>
+                        <th style="background-color: black; color:white; border: 1px solid white">Grantdate</th>
+                        <th style="background-color: black; color:white; border: 1px solid white">EsopGranted</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th style="background-color: black; color:white; border: 1px solid white">Project</th>
+                        <th style="background-color: black; color:white; border: 1px solid white">Grantdate</th>
+                        <th style="background-color: black; color:white; border: 1px solid white">EsopGranted</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                  {% for i in projectlist %}
+                  <tr>
+                      <td>{{ i.project }}</td>
+                      <td>{{ i.GrantDate }}</td>
+                      <td>{{ i.ESOPGranted }}</td>
+                  </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+{% else %}
+<!-- Begin Page Content -->
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Esop Details</h1>
+          </div>
+
+          <div class="row">
+              <div class="col-lg-6">
+                  <!-- Basic Card Example -->
+                  <div class="card shadow mb-4">
+                      <div class="card-header py-3">
+                          <h6 class="m-0 font-weight-bold text-primary">Step-2</h6>
+                      </div>
+                      <div class="card-body">
+                          <form method="post">{% csrf_token %}
+                              {{ form }}
+                              <br><br>
+                              {% if form.is_valid %}
+                              <h3 style="text-align: left">{{ msg }}</h3>
+                              {% endif %}
+                              <input type="submit" value="SUBMIT"/>
+                              <br><br>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6">
+
+              <!-- Dropdown Card Example -->
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Explanations of the fields here</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  Here we can explain the fields and how to submit the data to the user.
+                </div>
+              </div>
+              </div>
+          </div>
+        </div>
+{% endif %}
+<script type="text/javascript">
+  $('.datepicker').datepicker({
+    format: 'mm/dd/yyyy',
+    startDate: '-3d'
+});
+  </script>
+{% endblock %}

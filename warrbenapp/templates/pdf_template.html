@@ -1,0 +1,948 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Report</title>
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+<div>
+	<h1>
+		<table cellpadding="0" cellspacing="0" align="left">
+			<tbody>
+				<tr>
+					<td width="36" height="228">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br clear="all"/>
+	</h1>
+</div>
+<strong>
+	<br clear="all"/>
+</strong>
+<div>
+	<p>
+		<strong></strong>
+	</p>
+	<br clear="ALL"/>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	{% for i in pid %}
+	<p>
+		<strong> <em>{{ i.CompanyName }}</em> </strong>
+	</p>
+	<p>
+		 <strong><em>{{ i.Address }} </em></strong>
+	</p>
+	<p>
+		<strong> {{ i.DateOfReport }} </strong>
+	</p>
+    {% endfor %}
+
+	<p>
+		{% for i in pid %}
+		<strong>
+			For the kind attention of Mr. {{ i.ContactPerson }}
+			Contact Person designation  {{ i.ContactPersonDesignation }}
+		</strong>
+		{% endfor %}
+	</p>
+
+	<p>
+		Dear Sir,
+	</p>
+
+	<p>
+		<strong>Subject: </strong>
+		<strong>Fair Market Value of Employee Stock Options </strong>
+	</p>
+</div>
+<br clear="all"/>
+<div>
+	<p>
+		{% for i in pid %}
+		Please refer to the Purchase order No. _____ for valuation of employee
+stock options of <strong><em>{{ i.CompanyName }}</em></strong>
+		{% endfor %}
+		{% for i in pid3 %}
+		<strong> </strong> as on {{ i.GrantDate }} for financial
+		reporting purposes under Ind AS.
+		{% endfor %}
+	</p>
+	<p>
+		{% for i in pid %}
+The report has been prepared exclusively for the Management of <strong><em>{{ i.CompanyName }}</em></strong><strong> </strong> ("Management") for financial reporting and
+		accounting purposes and hence should not be used for any other purpose,
+		whether in whole or in part, without our prior written consent, which
+		consent will only be given after full consideration of the
+		circumstances at the time.
+		{% endfor %}
+	</p>
+	<p>
+		Please note that Warrben Advosry LLP ("Warrben") does not have any
+		responsibility or liability to your auditors or any other third party
+		and cannot accept any responsibility for reliance by them in acting or
+		refraining from acting on the contents of the report. Our analyses are
+		invalid if used for any purpose other than that stated herein. In
+		addition, Grant Thornton will not provide consent to be a named expert
+		in any filings, including, without limitation, any filings with the
+		U.S. Securities and Exchange Commission.
+	</p>
+	<p>
+		Please note that all comments in our report must be read in conjunction
+		with the Caveats to the report, which are contained in Section 4.
+	</p>
+	<br clear="all"/>
+</div>
+<br clear="all"/>
+<div>
+</div>
+<strong>
+	<br clear="all"/>
+</strong>
+<div>
+	<p>
+		<strong>Limitation of liability</strong>
+	</p>
+	<p>
+		We draw your attention to the limitation of liability clauses in
+		paragraph 8 in Appendix 3 of our Engagement Letter.
+	</p>
+	<p>
+		<strong>Forms of report</strong>
+	</p>
+	<p>
+		For your convenience, this report may have been made available to you
+		in electronic as well as hard copy format, multiple copies and versions
+		of this report may therefore exist in different media and in the case
+		of any discrepancy, the final signed hard copy should be regarded as
+		definitive.
+	</p>
+	<p>
+		Please feel free to contact us if you need any further
+		information/clarifications.
+	</p>
+	<p>
+		Yours sincerely,
+	</p>
+	<p>
+		Warrben Advosry LLP<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<h1>
+	</h1>
+	<h1>
+	</h1>
+<!--	<p>-->
+<!--		<a name="_TOCRange"></a>-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Background 5-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		&lt; Name of Company Issuing ESOPs &gt; ("the "Company") 5-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Purpose of Valuation 5-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Terms of ESOP Plans 6-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Grant of ESOPs 6-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Valuation Analysis 7-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Fair Value per equity share 7-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		<strong><a name="_Toc43640922"></a></strong>-->
+<!--		7-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Exercise Price 7-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Expected Term 7-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Volatility 7-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Risk Free Interest Rate 8-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Expected Dividend Yield 8-->
+<!--	</p>-->
+<!--	<p>-->
+<!--		Conclusion 9-->
+<!--	</p>-->
+	<h1>
+	</h1>
+</div>
+<strong>
+	<br clear="all"/>
+</strong>
+<div>
+	<h1>
+		<a name="_Toc43764952">Background</a>
+	</h1>
+	<h2>
+		<a name="_Toc43764953">&lt; Name of Company Issuing ESOPs &gt; (</a>
+		"the "Company")
+	</h2>
+	<p>
+		&#183; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+		ornare, metus ac tincidunt pulvinar, erat ante faucibus elit, dignissim
+		elementum libero nisl eget nunc. Etiam pharetra mi et metus faucibus
+		vel varius quam varius. Integer eu euismod metus. Etiam hendrerit odio
+		id risus imperdiet accumsan. Nulla pulvinar consectetur volutpat.
+		Praesent feugiat lectus sed est gravida varius. Quisque ligula eros.
+		Vestibulum et vestibulum libero.
+	</p>
+	<p>
+		&#183; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+		ornare, metus ac tincidunt pulvinar, erat ante faucibus elit, dignissim
+		elementum libero nisl eget nunc.
+	</p>
+	<p>
+		&#183; Duis ornare, metus ac tincidunt pulvinar, erat ante faucibus
+		elit, dignissim elementum libero nisl eget nunc. Etiam pharetra mi et
+		metus faucibus vel varius quam varius. Integer eu euismod metus. Etiam
+		hendrerit odio id risus imperdiet accumsan.
+	</p>
+	<p>
+		&#183; Etiam pharetra mi et metus faucibus vel varius quam varius.
+		Integer eu euismod metus. Etiam hendrerit odio id risus imperdiet
+		accumsan. Nulla pulvinar consectetur volutpat. Praesent feugiat lectus
+		sed est gravida varius. Quisque ligula eros. Vestibulum et vestibulum
+		libero.
+	</p>
+	<h3>
+	</h3>
+	<h2>
+		<a name="_Toc43764954">Purpose of Valuation</a>
+	</h2>
+</div>
+<br clear="all"/>
+<div>
+	<h3>
+	</h3>
+	<p>
+		<strong>Purpose of Valuation</strong>
+	</p>
+	<h3>
+	</h3>
+	<h2>
+		<a name="_Toc43764955">Terms of ESOP Plans</a>
+	</h2>
+	<table border="0" cellspacing="0" cellpadding="0" width="351">
+		<tbody>
+			<tr>
+				<td width="77" nowrap="" valign="bottom">
+					<p align="center">
+						<strong>Vesting</strong>
+					</p>
+				</td>
+				<td width="101" valign="bottom">
+					<p align="center">
+						<strong>Vesting date</strong>
+					</p>
+				</td>
+				<td width="89" valign="bottom">
+					<p align="center">
+						<strong>Number of ESOP vested</strong>
+					</p>
+				</td>
+				<td width="83" valign="bottom">
+					<p align="center">
+						<strong>Persentage of ESOP vested</strong>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="77" nowrap="" valign="bottom">
+					<p>
+						Vesting 1
+					</p>
+				</td>
+				<td width="101" nowrap="" valign="bottom">
+					<p align="right">
+						31-Mar-21
+					</p>
+				</td>
+				<td width="89" nowrap="" valign="bottom">
+					<p align="right">
+						200
+					</p>
+				</td>
+				<td width="83" nowrap="" valign="bottom">
+					<p align="right">
+						20%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="77" nowrap="" valign="bottom">
+					<p>
+						Vesting 2
+					</p>
+				</td>
+				<td width="101" nowrap="" valign="bottom">
+					<p align="right">
+						31-Mar-22
+					</p>
+				</td>
+				<td width="89" nowrap="" valign="bottom">
+					<p align="right">
+						200
+					</p>
+				</td>
+				<td width="83" nowrap="" valign="bottom">
+					<p align="right">
+						20%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="77" nowrap="" valign="bottom">
+					<p>
+						Vesting 3
+					</p>
+				</td>
+				<td width="101" nowrap="" valign="bottom">
+					<p align="right">
+						31-Mar-23
+					</p>
+				</td>
+				<td width="89" nowrap="" valign="bottom">
+					<p align="right">
+						200
+					</p>
+				</td>
+				<td width="83" nowrap="" valign="bottom">
+					<p align="right">
+						20%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="77" nowrap="" valign="bottom">
+					<p>
+						Vesting 4
+					</p>
+				</td>
+				<td width="101" nowrap="" valign="bottom">
+					<p align="right">
+						31-Mar-24
+					</p>
+				</td>
+				<td width="89" nowrap="" valign="bottom">
+					<p align="right">
+						200
+					</p>
+				</td>
+				<td width="83" nowrap="" valign="bottom">
+					<p align="right">
+						20%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="77" nowrap="" valign="bottom">
+					<p>
+						Vesting 5
+					</p>
+				</td>
+				<td width="101" nowrap="" valign="bottom">
+					<p align="right">
+						30-Mar-25
+					</p>
+				</td>
+				<td width="89" nowrap="" valign="bottom">
+					<p align="right">
+						200
+					</p>
+				</td>
+				<td width="83" nowrap="" valign="bottom">
+					<p align="right">
+						20%
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2>
+	</h2>
+	<h2>
+	</h2>
+	<h2>
+	</h2>
+	<h2>
+		<a name="_Toc43764956">Grant of ESOPs</a>
+	</h2>
+	<p>
+		&lt; Grant Date &gt;
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<p>
+		<strong></strong>
+	</p>
+	<h1>
+		<a name="_Toc43764957">Valuation Analysis</a>
+	</h1>
+	<p>
+		<strong>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+			ornare, metus ac tincidunt pulvinar, erat ante faucibus elit,
+			dignissim elementum libero nisl eget nunc. Etiam pharetra mi et
+			metus faucibus vel varius quam varius. Integer eu euismod metus.
+			Etiam hendrerit odio id risus imperdiet accumsan. Nulla pulvinar
+			consectetur volutpat. Praesent feugiat lectus sed est gravida
+			varius. Quisque ligula eros. Vestibulum et vestibulum libero.
+		</strong>
+		<strong></strong>
+	</p>
+	<h2>
+		<a name="_Toc43764958">Fair Value per equity share</a>
+	</h2>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare,
+		metus ac tincidunt pulvinar, erat ante faucibus elit, dignissim
+		elementum libero nisl eget nunc. Etiam pharetra mi et metus faucibus
+		vel varius quam varius. Integer eu euismod metus. Etiam hendrerit odio
+		id risus imperdiet accumsan. Nulla pulvinar consectetur volutpat.
+		Praesent feugiat lectus sed est gravida varius. Quisque ligula eros.
+		Vestibulum et vestibulum libero.
+	</p>
+	<h3>
+		&lt; Company's common equity value per share &gt;
+	</h3>
+	<h3>
+	</h3>
+	<h2>
+		<a name="_Toc43764960">Exercise Price</a>
+	</h2>
+	<h3>
+		&lt; Exercise Price &gt;
+	</h3>
+	<h2>
+		<a name="_Toc43764961">Expected Term</a>
+	</h2>
+	<table border="0" cellspacing="0" cellpadding="0" width="135">
+		<tbody>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p align="center">
+						<strong>Vesting</strong>
+					</p>
+				</td>
+				<td width="64" valign="bottom">
+					<p align="center">
+						<strong>Period</strong>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p>
+						Vesting 1
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p>
+						0.78
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p>
+						Vesting 2
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p>
+						1.78
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p>
+						Vesting 3
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p>
+						2.78
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p>
+						Vesting 4
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p>
+						3.78
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p>
+						Vesting 5
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p>
+						4.78
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2>
+		<a name="_Toc43764962">Volatility</a>
+	</h2>
+	<table border="0" cellspacing="0" cellpadding="0" width="473">
+		<tbody>
+			<tr>
+				<td width="100" valign="bottom">
+					<p align="center">
+						<strong>Comparable Companies</strong>
+					</p>
+				</td>
+				<td width="79" valign="bottom">
+					<p align="center">
+						<strong>0.4</strong>
+					</p>
+				</td>
+				<td width="67" valign="bottom">
+					<p align="center">
+						<strong>0.9</strong>
+					</p>
+				</td>
+				<td width="83" valign="bottom">
+					<p align="center">
+						<strong>1.4</strong>
+					</p>
+				</td>
+				<td width="79" valign="bottom">
+					<p align="center">
+						<strong>1.9</strong>
+					</p>
+				</td>
+				<td width="67" valign="bottom">
+					<p align="center">
+						<strong>2.4</strong>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="100" nowrap="" valign="bottom">
+					<p>
+						Infosys
+					</p>
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="83" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="100" nowrap="" valign="bottom">
+					<p>
+						Wipro
+					</p>
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="83" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="100" nowrap="" valign="bottom">
+					<p>
+						TCS
+					</p>
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="83" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="100" nowrap="" valign="bottom">
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+				</td>
+				<td width="83" nowrap="" valign="bottom">
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+				</td>
+			</tr>
+			<tr>
+				<td width="100" nowrap="" valign="bottom">
+					<p>
+						Average
+					</p>
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="83" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="100" nowrap="" valign="bottom">
+					<p>
+						Median
+					</p>
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="83" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="79" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+				<td width="67" nowrap="" valign="bottom">
+					<p align="right">
+						30%
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2>
+		<a name="_Toc43764963">Risk Free Interest Rate</a>
+	</h2>
+	<table border="0" cellspacing="0" cellpadding="0" width="199">
+		<tbody>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p align="center">
+						<strong>Vesting</strong>
+					</p>
+				</td>
+				<td width="64" valign="bottom">
+					<p align="center">
+						<strong>Period</strong>
+					</p>
+				</td>
+				<td width="64" valign="bottom">
+					<p align="center">
+						<strong>Risk free Rate</strong>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p>
+						Vesting 1
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p>
+						0.39
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p align="right">
+						6%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p>
+						Vesting 2
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p>
+						0.89
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p align="right">
+						6%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p>
+						Vesting 3
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p>
+						1.39
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p align="right">
+						6%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p>
+						Vesting 4
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p>
+						1.89
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p align="right">
+						6%
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="71" nowrap="" valign="bottom">
+					<p>
+						Vesting 5
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p>
+						2.39
+					</p>
+				</td>
+				<td width="64" nowrap="" valign="bottom">
+					<p align="right">
+						6%
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>
+	</h3>
+	<h2>
+		<a name="_Toc43764964">Expected Dividend Yield</a>
+	</h2>
+	<h3>
+		&lt; Dividend Yield &gt;
+	</h3>
+	<h3>
+	</h3>
+</div>
+<strong>
+	<br clear="all"/>
+</strong>
+<h1>
+	<a name="_Toc43764965">Conclusion</a>
+</h1>
+<p>
+	Based on the methodology and assumptions explained in the above sections,
+	the fair value of per time-based ESOP granted by the Company as on &lt;
+	Date of Grant &gt; has been estimated as shown below
+</p>
+<h3>
+</h3>
+        <table>
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Vesting date</th>
+        <th>Number of ESOP vested</th>
+        <th>Persentage of ESOP vested</th>
+        <th>Grant date (a)</th>
+        <th>Fair value of share in INR (d)</th>
+        <th>Exercise Price (a)</th>
+        <th>Dividend payout (c)</th>
+        <th>Fair Value of the Option in INR (e)</th>
+    </tr>
+    </thead>
+        <tr>
+            {% for i in sales %}
+            <td>{{ i.Type }}</td>
+            <td>{{ i.VestingDate }}</td>
+            <td>{{ i.NumOfEsop }}</td>
+            <td>{{ i.PerEsop }}%</td>
+
+            <td>{{ i.GrantDate }}</td>
+            <td>{{ i.FairValueofShare }}</td>
+            <td>{{ i.ExcersisePrice }}</td>
+            <td>{{ i.DividendPayout }}</td>
+            <td>{{ i.FairValueofOption }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+
+
+
+</body>
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
+
