@@ -41,7 +41,7 @@ class RegisterForm(forms.ModelForm):
     def save(self, *args, **kwargs):
         user = super(RegisterForm, self).save(*args, **kwargs)
         user.set_password(self.cleaned_data['password1'])
-        print('Saving user with country_code', user.country_code)
+        # print('Saving user with country_code', user.country_code)
         user.save()
         return user
 
